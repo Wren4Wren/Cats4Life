@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Image, Container } from "../css/Api.styled.js";
+import { Container, Button, } from "../css/Api.styled.js";
 import "../css/App.css";
+import "../css/Api.css";
 import { faker } from "@faker-js/faker";
 
 
 function Api (){
-
 
 const [cats, setCats] = useState([]);
 const [error, setError] = useState(null);
@@ -35,7 +35,7 @@ const fetchImages = async ()=>{
             cats.gender = faker.name.gender(true);
             cats.catType = faker.animal.cat();
             cats.word = faker.word.adjective();
-            cats.price = faker.commerce.price();
+            cats.price = faker.commerce.price(100,500,0,'£');
             return cats;
         });
         setCats(catData);
@@ -46,20 +46,20 @@ const fetchImages = async ()=>{
 
 
     return (
-    <div>
+    <Container className="container">
         {cats.map((cat,) => {
-        return <div>
-          <h3>{cat.name}</h3>
-          <Image src={cat.url} alt="cat pic"/>
-          <h4>${cat.price}</h4>
-          <h5>{cat.catType}</h5>
-          <h5>{cat.gender}</h5>
-          <h5>{cat.word}</h5>
-          <button>Take Me Home</button>
+        return <div className="content">
+        <h3>{cat.name}</h3>
+        <img className="img" src={cat.url} alt="cat pic"/>
+        <h4>{cat.price}</h4>
+        <h5>{cat.catType}</h5>
+        <h5>{cat.gender}</h5>
+        <h5>This cat is: {cat.word}</h5>
+        <Button className="button" onClick={()=>{addToBasket()}}>Take Me Home</Button>
         </div>
         })}
         {error && <p>{error}</p>}
-    </div>
+    </Container>
     )}
 
 

@@ -10,7 +10,7 @@ const NavBar = () => {
       <Link to="/about">
         <NavbarItems>About</NavbarItems>
       </Link>
-      <Link to="/contact">
+      <Link to="/contact" >
         <NavbarItems>Contact</NavbarItems>
       </Link>
     </Wrapper>

@@ -1,5 +1,5 @@
-import Api from "./components/Api.js";
 import About from "./components/About";
+import Shop from "./components/Shop";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -21,10 +21,10 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} /> 
+            <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
-          <Api />
           <Footer />
         </BrowserRouter>
       </Container>

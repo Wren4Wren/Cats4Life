@@ -1,18 +1,22 @@
-import "../App";
-const modal = document.getElementsById("catButton");
-const btn = document.getElementsById("openModal");
-const span = document.getElementsByClassName("closeButton")[0];
+import "../css/App.css"
 
-btn.onclick = function () {
-  modal.style.display = "block";
-};
+const Basket = (props) => {
 
-span.onclick = function () {
-  modal.style.display = "none";
+  return (
+    <div className={`modal ${props.show ? 'show' : ''}`} onClick={props.onClose}>
+      <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+        <div className="modalHeader">
+          <h4 className="modalTitle">{props.title}</h4>
+          <button onClick={props.onClose} className="btn">
+            &times;
+          </button>
+        </div>
+        <div className="modalBody">{props.children}</div>
+        <div className="modalFooter">
+          <h5>Total: </h5>
+        </div>
+      </div>
+    </div>
+  );
 };
-
-window.onclick = function (e) {
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-};
+export default Basket;

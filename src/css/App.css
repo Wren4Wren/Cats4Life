@@ -1,14 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Lobster Two', cursive;
 }
 
 .container{
     display: flex;
 }
-.closeButton:hover,
+/* .closeButton:hover,
 .closeButton:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
+} */
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Lobster Two', cursive;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.modal.show{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modalContent {
+  width: 500px;
+  background-color: #ffff;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal.show .modalContent{
+transform: translateY(0)
+}
+
+.modalHeader,
+.modal-footer {
+padding: 10px;
+display: flex;
+justify-content: space-between;
+}
+.modalTitle{
+ margin: 0;
+}
+.modalBody{
+  padding: 10;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }

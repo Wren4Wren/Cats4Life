@@ -10,7 +10,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
 
-
 function App() {
 
 
@@ -22,9 +21,9 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} /> 
-            <Route path="/shop" element={ <Shop /> } />
+            <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={ <Contact /> } />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </BrowserRouter>

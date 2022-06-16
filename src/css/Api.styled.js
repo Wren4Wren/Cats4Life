@@ -1,5 +1,4 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 export const Container = styled.div`
     text-align: center;
@@ -22,6 +21,6 @@ export const Button = styled.button`
         background-color: blueviolet;
         box-shadow: 3px 3px lightblue; 
         box-shadow-border: 3px;
-        cursor: pointer;
+        cursor: url(../components/images/pawPrint.jpg), pointer;
     }
 `

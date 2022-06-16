@@ -1,7 +1,7 @@
 import "../css/About.css"
 
 const catSelfie = new URL("./images/catSelfie.jpeg", import.meta.url)
-const Background = new URL("./images/catsBlue.jpg", import.meta.url)
+// const Background = new URL("./images/catsBlue.jpg", import.meta.url)
 
 const About = () => {
     return ( 

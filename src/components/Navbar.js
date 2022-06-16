@@ -1,7 +1,9 @@
-import { Wrapper, NavbarItems } from "../css/Navbar.styled";
+import { Wrapper, NavbarItems, } from "../css/Navbar.styled";
 import { Link } from "react-router-dom";
 import Basket from "./Basket";
 import { useState } from "react";
+
+
 
 const NavBar = () => {
     const [show, setShow] = useState(false)

@@ -4,7 +4,7 @@
 }
 
 .container{
-    display: flex;
+  display: flex;
 }
 .closeButton:hover,
 .closeButton:focus {
@@ -12,3 +12,4 @@
   text-decoration: none;
   cursor: pointer;
 }
+

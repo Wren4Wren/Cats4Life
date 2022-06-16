@@ -31,3 +31,12 @@ export const Button = styled.button`
   border: 2px solid ${(props) => props.background};
   border-radius: 5px;
 `;
+
+export const BContainer = styled.div`
+    text-align: center;
+    background-color: var(--color-1);
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+`

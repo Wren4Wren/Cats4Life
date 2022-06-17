@@ -1,12 +1,12 @@
-import Api from "./Api";
-import {  Container } from "../css/Api.styled.js";
+import { Container } from "../css/App.styled";
+import App from "../App";
 
 
 const Shop = () => {
 
     return ( 
         <Container>
-        <Api />
+        <App/>
         </Container>
     );
 }

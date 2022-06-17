@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 
-const NavBar = () => {
+const NavBar = ({cartItems}) => {
   const [show, setShow] = useState(false);
   return (
     <Wrapper>
@@ -22,7 +22,7 @@ const NavBar = () => {
         <NavbarItems>Contact</NavbarItems>
       </Link>
       <button onClick={() => setShow(true)}>Basket</button>
-      <Basket title="Checkout Basket" onClose={() => setShow(false)}show={show}>
+      <Basket cartItems = {cartItems} title="Checkout Basket" onClose={() => setShow(false)}show={show}>
         <p></p>
       </Basket>
     </Wrapper>

@@ -3,6 +3,7 @@ import { Container, Button, } from "../css/Api.styled.js";
 import "../css/App.css";
 import "../css/Api.css";
 import { faker } from "@faker-js/faker";
+import Contact from "./Contact.js";
 
 
 function Api (){
@@ -62,5 +63,8 @@ const fetchImages = async ()=>{
     </Container>
     )}
 
+    <div>
+        <Contact/>
+    </div>
 
 export default Api;

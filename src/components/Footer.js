@@ -1,11 +1,11 @@
-import { Container } from "../css/Footer.styled";
+import { ContainerF } from "../css/Footer.styled";
 
 const Footer = () => {
   return (
-    <Container>
+    <ContainerF>
       <p>Copyright 2022</p>
       <p>Proudly Created by: Desk 4</p>
-    </Container>
+    </ContainerF>
   );
 };
 

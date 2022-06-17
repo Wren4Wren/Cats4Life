@@ -4,7 +4,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavBar from "./components/Navbar";
-import { Container, Logo, Button } from "./css/App.styled";
+import { ContainerC, Logo, Button } from "./css/App.styled";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { faker } from "@faker-js/faker";
 import { useEffect, useState } from "react";
@@ -59,7 +59,7 @@ useEffect(() => {
         <Logo className="logo" src={catLogo} alt="logo" />
         <h1>Cat Shop</h1>
       </div>
-      <Container>
+      <ContainerC>
         <BrowserRouter>
           <NavBar cartItems = { cartItems } />
           <Routes>
@@ -86,7 +86,7 @@ useEffect(() => {
           })}
           <Footer />
         </BrowserRouter>
-      </Container>
+      </ContainerC>
     </div>
   );
 };

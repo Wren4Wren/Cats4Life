@@ -1,13 +1,13 @@
-import { Container } from "../css/App.styled";
+import { ContainerC } from "../css/App.styled";
 import App from "../App";
 
 
 const Shop = () => {
 
     return ( 
-        <Container>
+        <ContainerC>
         <App/>
-        </Container>
+        </ContainerC>
     );
 }
 

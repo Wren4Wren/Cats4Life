@@ -18,7 +18,7 @@ const About = () => {
 On top of that, we have an ever growing community on social media of over 1.25 million cat lovers who contribute to our vast resource of cat knowledge. We regularly reach out to our cat community with surveys to hear first hand accounts from cat owners across the globe who provide their feedback, real-world experience and product recommendations.</p>   
             <br></br>
          <div className="catSelfie">
-            <img src= {catSelfie} alt="cats"/>
+            <img className="kitty" src= {catSelfie} alt="cats"/>
             <br></br>
             <br></br>
             <ol>

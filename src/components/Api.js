@@ -3,7 +3,7 @@ import { Container, Button } from "../css/Api.styled.js";
 import "../css/App.css";
 import "../css/Api.css";
 import { faker } from "@faker-js/faker";
-import Contact from "./Contact.js";
+
 
 function Api() {
   const [cats, setCats] = useState([]);
@@ -69,7 +69,7 @@ function Api() {
       })}
       {error && <p>{error}</p>}
     </Container>
-  );
-}
+);
+      }
 
 export default Api;

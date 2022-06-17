@@ -1,9 +1,11 @@
-import "../css/App.css"
+import "../css/App.css";
 
 const Basket = (props) => {
-
   return (
-    <div className={`modal ${props.show ? 'show' : ''}`} onClick={props.onClose}>
+    <div
+      className={`modal ${props.show ? "show" : ""}`}
+      onClick={props.onClose}
+    >
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
         <div className="modalHeader">
           <h4 className="modalTitle">{props.title}</h4>

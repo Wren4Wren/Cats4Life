@@ -69,7 +69,7 @@ function Api() {
       })}
       {error && <p>{error}</p>}
     </Container>
-);
-      }
+  );
+}
 
 export default Api;

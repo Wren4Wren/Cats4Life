@@ -1,7 +1,7 @@
 
 
 body{
-    background-image: url(../components/images/paw-print-orange.jpg);
+    background-image: url(../components/images/cat-pattern-blue-paw\ \(2\).jpg);
     background-repeat: repeat;
     background-position: fixed;
     margin: 0px;
@@ -35,10 +35,12 @@ h3{
 h4{
     color: red;
     font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 h5{
     color: aquamarine;
     font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: cadetblue;
 }
 
@@ -46,7 +48,7 @@ h5{
 .img{
     display: flex;
     justify-content: center;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
 }

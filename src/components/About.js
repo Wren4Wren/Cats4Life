@@ -24,7 +24,7 @@ const About = () => {
         </div>
             <br></br>
          <div className="catSelfie">
-            <img src= {catSelfie} alt="cats"/>
+            <img className="kitty" src= {catSelfie} alt="cats"/>
             <br></br>
             <br></br>
             <div className="Header">

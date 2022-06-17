@@ -4,12 +4,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-img {
+.kitty {
     max-width: 100%;
     border: 7px solid #555;
 }
 
-img:hover {
+.kitty:hover {
     animation: shake 0.5s;
   
     animation-iteration-count: infinite;
@@ -75,5 +75,4 @@ img:hover {
     color: #292b2c;
     text-align: center;
   }
-
 

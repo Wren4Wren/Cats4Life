@@ -9,12 +9,6 @@
 .container{
     display: flex;
 }
-/* .closeButton:hover,
-.closeButton:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} */
 
 .modal {
   position: fixed;
@@ -56,11 +50,16 @@ justify-content: space-between;
 }
 .modalTitle{
  margin: 0;
+ font-size: 40px;
 }
 .modalBody{
   padding: 10;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgb(240, 234, 234);
+}
+.btn{
+  width: 20px;
+  height: 22px;
 }
 .Facts{
   font-family: Verdana, Geneva, Tahoma, sans-serif;

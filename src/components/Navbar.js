@@ -22,11 +22,7 @@ const NavBar = () => {
         <NavbarItems>Contact</NavbarItems>
       </Link>
       <button onClick={() => setShow(true)}>Basket</button>
-      <Basket
-        title="Checkout Basket"
-        onClose={() => setShow(false)}
-        show={show}
-      >
+      <Basket title="Checkout Basket" onClose={() => setShow(false)}show={show}>
         <p></p>
       </Basket>
     </Wrapper>

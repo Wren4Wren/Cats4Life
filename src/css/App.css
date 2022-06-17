@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Lobster Two', cursive;
 }
 
 .container{
     display: flex;
 }
+
 .closeButton:hover,
 .closeButton:focus {
   color: black;
@@ -18,20 +22,6 @@ header:hover:not(.active) {
   background-color: rgb(205, 119, 57);
 }
 
-
-header{
-  display: flex;
-  border: 1px solid;
-  font-size: 40px;
-  border-radius: 10px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-  background-color:burlywood
-}
-
-
-
 form{
   display: flex;
   justify-content: center;
@@ -40,22 +30,11 @@ form{
   margin: 4px 0;
   box-sizing: border-box;
   border: none;
-  
   color: white;
   
 }
 
-p{
-  margin: 10px;
-  
-}
-
-body {
-  background: rgb(64, 119, 191);
-    animation: mymove 5s infinite;
-}
-
-button{
+.ContactBtn{
   width: 50%;
   border: 0;
   cursor: pointer;
@@ -66,8 +45,8 @@ button{
   border-radius: 10px;
 }
 
-button:hover,
-button:focus {
+.ContactBtn:hover,
+.ContactBtn:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
@@ -75,4 +54,112 @@ button:focus {
 input{
   margin: 10px;
   padding: 8px;
+
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  font-family: 'Lobster Two', cursive;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.modal.show{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modalContent {
+  width: 500px;
+  background-color: #ffff;
+  transform: translateY(-200px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal.show .modalContent{
+transform: translateY(0)
+}
+
+.modalHeader,
+.modal-footer {
+padding: 10px;
+display: flex;
+justify-content: space-between;
+}
+.modalTitle{
+ margin: 0;
+ font-size: 40px;
+}
+.modalBody{
+  padding: 10;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid rgb(240, 234, 234);
+}
+.btn{
+  width: 20px;
+  height: 22px;
+}
+.Facts{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-image: url(../components/images/cat-pattern-blue-paw\ \(2\).jpg);
+    background-repeat: repeat;
+    background-position: fixed;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.conatiner{
+    display: flex;
+    flex-direction: row;
+}
+.conatiner content{
+    display: flex;
+    justify-content: center;
+}
+
+
+.content{
+    border: 5px double blue;
+    background: none;
+    background-color: aliceblue;
+    margin: 20px;
+}
+
+
+h3{
+    color: aqua;
+    font-size: 55px;
+    background-color: black;
+}
+h4{
+    color: red;
+    font-size: 60px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+h5{
+    color: aquamarine;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: cadetblue;
+}
+
+
+.img{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+
 }

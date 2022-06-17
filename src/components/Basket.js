@@ -1,18 +1,38 @@
-import "../App";
-const modal = document.getElementsById("catButton");
-const btn = document.getElementsById("openModal");
-const span = document.getElementsByClassName("closeButton")[0];
+import "../css/App.css";
+import {} from "../App";
 
-btn.onclick = function () {
-  modal.style.display = "block";
+const Basket = ({show, onClose, title, cartItems}) => {
+  return (
+    <div
+      className={`modal ${show ? "show" : ""}`}
+      onClick={onClose}>
+      <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+        <div className="modalHeader">
+          <h4 className="modalTitle">{title}</h4>
+          <button onClick={onClose} className="btn">
+            &times;
+          </button>
+        </div>
+        <div className="modalBody">
+          { cartItems.map( ( item, removeItemFromBasket ) => (
+            <div className="Cat">
+              <img src={ item.url } alt="basket item" />
+              <h3>{ item.name }</h3>
+              <p>{ item.price }</p>
+              <button
+                onClick={ () => {
+                  removeItemFromBasket( item.splice( 1 ) );
+                } }>
+                Remove
+              </button>
+            </div>
+          ))}
+            </div>
+        <div className="modalFooter">
+          <h5>Total: </h5>
+        </div>
+      </div>
+    </div>
+  );
 };
-
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-window.onclick = function (e) {
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-};
+export default Basket;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Image, Container } from "../css/Api.styled.js";
 import "../css/App.css";
 import { faker } from "@faker-js/faker";
+import Contact from "./Contact.js";
 
 
 function Api (){
@@ -62,5 +63,8 @@ const fetchImages = async ()=>{
     </div>
     )}
 
+    <div>
+        <Contact/>
+    </div>
 
 export default Api;

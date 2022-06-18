@@ -23,7 +23,7 @@ const About = () => {
             On top of that, we have an ever growing community on social media of over 1.25 million cat lovers who contribute to our vast resource of cat            knowledge. We regularly reach out to our cat community with surveys to hear first hand accounts from cat owners across the globe who provide        their feedback, real-world experience and product recommendations.
         </div>
             <br></br>
-         <div className="catSelfie">
+        <div className="catSelfie">
             <img className="kitty" src= {catSelfie} alt="cats"/>
             <br></br>
             <br></br>
@@ -46,7 +46,7 @@ const About = () => {
                     <li>The most popular pedigree cats in descending order are the Persian cat, followed by the Main Coon cat and the Siamese cat.</li>
                 </ol>
             </div>
-         </div>
+        </div>
         </div>
     );
 };

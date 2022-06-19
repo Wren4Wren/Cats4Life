@@ -1,7 +1,8 @@
 import "../css/Basket.css";
 
 
-const Basket = ({show, onClose, title, cartItems, removeItem, addItem}) => {
+const Basket = ({show, onClose, title, cartItems, removeItem, addItem,}) => {
+
 
 
   return (
@@ -23,7 +24,7 @@ const Basket = ({show, onClose, title, cartItems, removeItem, addItem}) => {
               <div className="mainBox">
               <img className="basketImg" src={ item.url } alt="basket item" />
               <div>
-              <p className="price">{ item.price }</p>
+              <div className="price">Sub-total: {(parseInt(item.price*item.qty))}</div>
               <div className="mainButtons">
               <button className="addButton"
                 onClick={()=> addItem(item)}>

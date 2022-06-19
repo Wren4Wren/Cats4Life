@@ -13,7 +13,9 @@ const Shop = () => {
     const [error, setError] = useState(null);
     const [cartItems, setCartItems] = useState([]);
     const [show, setShow] = useState(false);
-    
+
+
+
     const addItem = (item)=>{
         const exist = cartItems.find((x)=> x.id === item.id)
         if (exist){
@@ -73,7 +75,7 @@ return (
     <div>
         <FlexEnd>
         <BasketButton onClick={() => setShow(true)}>Basket</BasketButton>
-        <Basket cartItems={cartItems} removeItem={removeItem} title="Checkout Basket" onClose={() => setShow(false)}show={show}>
+        <Basket cartItems={cartItems} removeItem={removeItem} addItem={addItem} title="Checkout Basket" onClose={() => setShow(false)}show={show}>
         <p></p>
         </Basket>
         </FlexEnd>

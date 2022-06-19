@@ -1,9 +1,11 @@
-import "../css/App.css";
-import {} from "../App";
+import "../css/Basket.css";
 
-const Basket = ({show, onClose, title, cartItems}) => {
+
+const Basket = ({show, onClose, title, cartItems, removeItem, addItem}) => {
+
+
   return (
-    <div
+    <div 
       className={`modal ${show ? "show" : ""}`}
       onClick={onClose}>
       <div className="modalContent" onClick={(e) => e.stopPropagation()}>
@@ -14,23 +16,31 @@ const Basket = ({show, onClose, title, cartItems}) => {
           </button>
         </div>
         <div className="modalBody">
-          { cartItems.map( ( item, removeItemFromBasket ) => (
-            <div className="Cat">
-              <img src={ item.url } alt="basket item" />
+          <div>{cartItems.length === 0 && <div>No Cats added</div>}</div>
+          { cartItems.map( ( item ) => (
+            <div key={item.id} className="Cat" >
               <h3>{ item.name }</h3>
-              <p>{ item.price }</p>
-              <button
-                onClick={ () => {
-                  removeItemFromBasket( item.splice( 1 ) );
-                } }>
-                Remove
+              <div className="mainBox">
+              <img className="basketImg" src={ item.url } alt="basket item" />
+              <div>
+              <p className="price">{ item.price }</p>
+              <div className="mainButtons">
+              <button className="addButton"
+                onClick={()=> addItem(item)}>
+                +
               </button>
+              <p className="qty">{item.qty}</p>
+              <button className="removeButton"
+                onClick={()=> removeItem(item) }>
+                -
+              </button>
+              </div>
+              </div>
+              </div>
             </div>
           ))}
             </div>
-        <div className="modalFooter">
-          <h5>Total: </h5>
-        </div>
+          <h5 className="modalFooter">Total: £</h5>
       </div>
     </div>
   );

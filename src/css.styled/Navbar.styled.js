@@ -5,12 +5,12 @@ export const Wrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
   background-color: #424651;
-  padding: 40px;
+  padding: 30px;
 `;
 
 export const NavbarItems = styled.a`
-  font-size: 16px;
-  margin-right: 16px;
+  font-size: 25px;
+  margin-right: 25px;
   color: white;
   &:hover {
     opacity: 0.5;

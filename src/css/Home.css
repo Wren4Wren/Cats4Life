@@ -1,5 +1,51 @@
 
+.h1{
+    text-align: center;
+    font-size: 70px;
+    background: none;
+    background-color: aqua;
+}
+.h2{
+    text-align: center;
+    font-size: 40px;
+    background: none;
+    background-color: aqua;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
 
-.cursor{
+
+.home-container{
+    position: relative;
+    text-align: center;
+}
+.img-home{
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    margin-bottom: -5px;
+}
+.text-center{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text{
+    font-size: 33px;
+}
+
+.enter{
+    font-size: 80px;
+    padding-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px;
     cursor: pointer;
+}
+
+.enter:hover{
+    background-color: aqua;
+    color: black;
+    border: 5px solid black;
 }

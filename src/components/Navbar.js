@@ -1,6 +1,5 @@
 import { Wrapper, NavbarItems, } from "../css.styled/Navbar.styled";
 import { Link } from "react-router-dom";
-import "../css/Navbar.css";
 
 
 

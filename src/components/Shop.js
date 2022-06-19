@@ -1,5 +1,5 @@
 
-import { ContainerC, Button } from "../css.styled/Shop.styled";
+import { ContainerC, Button, BasketButton, FlexEnd } from "../css.styled/Shop.styled";
 import { faker } from "@faker-js/faker";
 import { useEffect, useState } from "react";
 import "../css/Shop.css"
@@ -14,10 +14,27 @@ const Shop = () => {
     const [cartItems, setCartItems] = useState([]);
     const [show, setShow] = useState(false);
     
-    const handleClick = (item) => {
-        setCartItems([...cartItems, item]);
+    const addItem = (item)=>{
+        const exist = cartItems.find((x)=> x.id === item.id)
+        if (exist){
+        setCartItems(cartItems.map((x)=>
+        x.id === item.id ? {...exist, qty: exist.qty + 1}: x))
+        } else{
+        setCartItems([...cartItems, {...item, qty:1}])
+        }
     };
-    
+
+    const removeItem = (item) =>{
+        const exist = cartItems.find((x)=> x.id === item.id)
+        if (exist.qty === 1){
+        setCartItems(cartItems.filter((x)=> x.id !== item.id))
+        } else {
+        setCartItems(cartItems.map((x)=>
+        x.id === item.id ? {...exist, qty: exist.qty - 1}: x))
+        }
+    };
+
+
     const fetchImages = async () => {
         try {
         const response = await fetch(
@@ -43,6 +60,7 @@ const Shop = () => {
             cats.catType = faker.animal.cat();
             cats.word = faker.word.adjective();
             cats.price = faker.commerce.price(100, 500, 0, "£");
+            cats.id = faker.commerce.price(0, 50000, 0)
             return cats;
             });
         setCats(catData);
@@ -53,23 +71,23 @@ const Shop = () => {
 
 return ( 
     <div>
-        <div>
-        <button onClick={() => setShow(true)}>Basket</button>
-        <Basket cartItems = {cartItems} title="Checkout Basket" onClose={() => setShow(false)}show={show}>
+        <FlexEnd>
+        <BasketButton onClick={() => setShow(true)}>Basket</BasketButton>
+        <Basket cartItems={cartItems} removeItem={removeItem} title="Checkout Basket" onClose={() => setShow(false)}show={show}>
         <p></p>
         </Basket>
-        </div>
+        </FlexEnd>
         <ContainerC>
         {cats.map((cat) => {
             return (
-                <div className="content">
+                <div key={cat.id} className="content" >
                 <h3>{cat.name}</h3>
                 <img className="img" src={cat.url} alt="cat pic" />
                 <h4>{cat.price}</h4>
                 <h5>{cat.catType}</h5>
                 <h5>{cat.gender}</h5>
                 <h5>This cat is: {cat.word}</h5>
-                <Button className="button" onClick={() => handleClick(cat)}>
+                <Button className="button" onClick={() => addItem(cat)}>
                     Take Me Home
                 </Button>
             {error && <p>{error}</p>}

@@ -24,13 +24,15 @@ e.preventDefault();
 
 return ( 
     <div>
-        <h1 className="header"> Contact Us</h1>
+        <h1 className="headerContact"> Contact Us</h1>
+        <div className="box">
         <form onSubmit={sendMail}>
             <input type="text" name="sender_name" value={sender_name} onChange={handleName} required placeholder="Your name" />
             <input type="email" name ="send_email" value={sende_email} onChange={handleEmail} required placeholder="your email id" />
-            <textarea name="message" value={message} onChange={handleMessage} required placeholder="your message" />
+            <textarea className="messageBox" name="message" value={message} onChange={handleMessage} required placeholder="your message" />
             <button className="ContactBtn" type="sumbit">Send mail</button>
         </form>
+        </div>
     </div>
 );
 }

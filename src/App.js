@@ -4,7 +4,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import NavBar from "./components/Navbar";
-import { Logo } from "./css.styled/App.styled";
+import { Logo, TopHeader, LogoText } from "./css.styled/App.styled";
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import "./css/App.css"
 const catLogo = new URL("./components/images/catLogoBlue.png", import.meta.url);
@@ -15,10 +15,10 @@ function App() {
 
   return (
     <div>
-      <div>
+      <TopHeader>
         <Logo className="logo" src={catLogo} alt="logo" />
-        <h1>Cat Shop</h1>
-      </div>
+        <LogoText>Cats Only</LogoText>
+      </TopHeader>
         <BrowserRouter>
           <NavBar />
           <Routes>
